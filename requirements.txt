@@ -1,0 +1,24 @@
+# 阿里云飞天专有云 云监控采集脚本 — 依赖说明
+#
+# 本脚本 100% 使用 Python 3 标准库，无需安装任何第三方包。
+# 所有用到的模块均内置于 Python 3.6+ 中：
+#
+#   argparse    — 命令行参数解析
+#   base64      — Base64 编码（签名使用）
+#   datetime    — 时间戳格式化
+#   hashlib     — SHA1 哈希（签名使用）
+#   hmac        — HMAC-SHA1 签名
+#   json        — JSON 序列化/反序列化
+#   ssl         — HTTPS 连接（关闭自签证书校验）
+#   time        — Unix 时间戳
+#   urllib      — HTTP 请求发送
+#   uuid        — 随机 SignatureNonce 生成
+#
+# 要求：Python >= 3.6
+# 推荐：Python 3.11（与 ~/文档/py311 虚拟环境一致）
+#
+# 内网部署步骤：
+#   1. 将 cms_monitor.py 复制到目标机器
+#   2. 确认 Python 版本：python3 --version
+#   3. 无需 pip install，直接运行：
+#      python3 cms_monitor.py test
